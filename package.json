@@ -1,0 +1,27 @@
+{
+  "description": "An Image Scraper",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "union": "0.1.7",
+    "flatiron": "0.1.13",
+    "ecstatic": "*",
+    "hogan.js":"2.0.0",
+    "async": "*",
+    "sugar": "1.2.4",
+    "restler":"2.0.0",
+    "jsdom":"0.2.13"
+  },
+  "devDependencies": {
+    "api-easy": "0.3.2",
+    "mocha": "*",
+    "should": "0.6.0",
+    "zombie": "*",
+    "chai": "*"
+  },
+  "scripts": {
+    "test": "make test",
+    "start": "node app.js"
+  },
+  "name": "scraper"
+}

@@ -1,0 +1,7 @@
+@media (min-width: 980px){
+  body { padding-top: 90px; }
+}
+
+ul.images { list-style: none; }
+ul.images li { display: inline; }
+ul.images img { width: 100px }
