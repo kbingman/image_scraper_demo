@@ -5,12 +5,16 @@
   "dependencies": {
     "union": "0.1.7",
     "flatiron": "0.1.13",
+    "broadway":"*",
     "ecstatic": "*",
+    "director":"*",
+    "cssom":"*",
     "hogan.js":"2.0.0",
     "async": "*",
     "sugar": "1.2.4",
     "request":"*",
-    "jsdom":"0.2.13"
+    "jsdom":"0.2.13",
+    "pkginfo":"*"
   },
   "devDependencies": {
     "api-easy": "0.3.2",
