@@ -76,7 +76,7 @@ var View = {
         step = imageEl.width() + 12,
         rows = scrollerWindowWidth > 740 && scrollerWindowWidth < 960 ? 1 : 2, 
         scrollerWidth = Math.ceil(numberOfImages / rows) * step,
-        numberOfPanes = Math.ceil(scrollerWidth / scrollerWindowWidth),
+        numberOfPanes = Math.round(scrollerWidth / scrollerWindowWidth),
         links = [];
         
     imagesContainer.css({ 
