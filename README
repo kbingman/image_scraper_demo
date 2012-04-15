@@ -1,6 +1,6 @@
 To run this app, first be sure node.js and npm are installed. 
 
-Then run 'npm install' for the packages. With luck I have not missed anything. 
+Then run '[sudo] npm install' for the packages. With luck I have not missed anything. 
 
 To start the app, run 'node app.js' or 'npm start'.
 
