@@ -127,7 +127,7 @@ var View = {
         displayWidth = display.width();;
         
     View.buildBubbleNav();
-    $('div#results img').hide().load(function(){
+    $('div#results img').css({ 'opacity': 0}).load(function(){
       var image = this;
       
       setTimeout(function(){
@@ -139,11 +139,17 @@ var View = {
            img.css({
              'width': displayWidth + 'px',
              'display': 'inline', 
+             'opacity': 1,
+             '-webkit-transition': 'opacity 0.3s linear',
+             'transition': 'opacity 0.5s linear',
              'margin-top': Math.round((displayHeight - (height * displayWidth/width))/2) + 'px'
            });
          } else {
            img.css({ 
              'display': 'inline', 
+             'opacity': 1,
+             '-webkit-transition': 'opacity 0.3s linear',
+             'transition': 'opacity 0.5s linear',
              'margin-top': (displayHeight - height)/2 + 'px' 
            });
          }

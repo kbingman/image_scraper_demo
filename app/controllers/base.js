@@ -2,7 +2,6 @@ var flatiron = require('flatiron'),
     app = flatiron.app,
     jsdom = require('jsdom'),
     request = require('request'),
-    cleaner = require('../../lib/cleaner'),
     Base = exports;
     
 Base.index = function(name){
