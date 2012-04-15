@@ -1,9 +1,14 @@
-<h2>URL: {{ siteUrl }}</h2>
-<h3>{{ title }}</h3>
+<h2>URL: <a href="{{ siteUrl }}">{{ siteUrl }}</a></h2>
+<h3>{{ title }} {{# showImages }}&ndash; <span id="count">{{ imageCount }}</span> images found{{/ showImages }}</h3>
 
 {{# showImages }}
-<ul id="images" class="images">
-{{> index/image }} 
-</ul>
-{{/ showImages }}
+<div class="scroller">
+  <ul id="images" class="images">
+  {{> index/image }} 
+  </ul>
+  {{/ showImages }}
+</div>
+
+<div id="bubble-container"></div>
+
 

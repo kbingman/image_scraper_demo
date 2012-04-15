@@ -2,6 +2,30 @@
   body { padding-top: 90px; }
 }
 
-ul.images { list-style: none; }
-ul.images li { display: inline; }
-ul.images img { width: 100px }
+
+/* -------------------- Search Form --------------------*/
+
+input#site_url { width: 99%; font-size: 3em; height: 1em; }
+input#match_term { width: 68%; font-size: 3em; height: 1em; }
+
+#select-image label { font-size: 2em; padding-bottom: 0.2em; }
+#select-image button.btn { 
+  font-size: 2.5em; height: 1.6em; margin: 0 0; 
+  padding-left: 1em; padding-right: 1em; float: right; 
+}
+
+/* -------------------- Image Results --------------------*/
+
+.scroller { height: 420px; width: 100%; overflow: hidden; }
+ul#images { list-style: none; margin: 0; padding: 0; overflow: auto; }
+#images li { display: block; float: left; margin: 0 12px 12px 0; width: 220px; height: 170px; }
+#images .filename { width: 220px; overflow: hidden; }
+#images .display { width: 220px; height: 140px; overflow: hidden; background: #eee; text-align: center; }
+
+/* -------------------- Bubble Nav --------------------*/
+#bubble-container { text-align: center; margin-bottom: 42px; }
+#bubble-nav { list-style: none; margin: 0 0; display: inline; }
+#bubble-nav a { display: inline-block; width: 42px; height: 42px; margin: 0 4px; line-height: 42px; border-radius: 50%; background: #aaa; 
+ color: white; text-decoration: none;  text-align: center; font-weight: bold; font-size: 16px; }
+#bubble-nav a.active { background: #444; }
+

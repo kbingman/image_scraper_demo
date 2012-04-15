@@ -6,11 +6,6 @@ var fs = require('fs'),
 
 Partials.attach = function (options) {
   
-  // this.redirect = function(app, path){
-  //   app.res.writeHead(302, { 'Location': path });
-  //   app.res.end();
-  // },
-
   // Currently compiles all the partials, as this is not too slow
   // this may need to change if there are a lot of partials
   this.partials = function(callback) {
@@ -22,12 +17,12 @@ Partials.attach = function (options) {
       if(err) return callback(err);
       
       var read_files = function(folder, done){
-        var folder_path = __dirname + path + '/' + folder;
+        var folderPath = __dirname + path + '/' + folder;
       
-        fs.readdir(folder_path, function(err, f) {
+        fs.readdir(folderPath, function(err, f) {
           if(err) return callback(err);
           f.forEach(function(file){
-            files.push(folder_path + '/' + file)
+            files.push(folderPath + '/' + file)
           });
           done();
         });
@@ -60,20 +55,18 @@ Partials.attach = function (options) {
   },
   
   this.render = function(template_name, data, callback){ 
-    // var template_path = path.join(__dirname, '../templates', template_name + '.html');
-    
     this.partials(function(err, partials){
       if(err){
         return callback(err);
       } else {
         var partial = partials[template_name]; 
-        if(callback) callback.call(this, partial.render(data, partials));
+        if(callback) callback(partial.render(data, partials));
       }
     });
   },
   
   // app has to be sent here, because our local copy does not contain the request or response.
-  this.render_layout = function(app, content, layout){
+  this.renderLayout = function(app, content, layout){
     var layout = layout ? layout : 'application';
     var layout_path = path.join(__dirname, '../app/layouts', layout + '.mustache');
     
@@ -92,13 +85,3 @@ Partials.attach = function (options) {
   }
   
 };
-
-// Partials.init = function (done) {
-// 
-//   //
-//   // This plugin doesn't require any initialization step.
-//   //
-//   return done();
-// };
-
-

@@ -1,7 +1,6 @@
 var fs = require('fs'),
     hogan = require('hogan.js'),
     async = require('async');
-    // sugar = require('sugar');
 
 var compile = function (callback) {
   var path = '/../templates';
@@ -54,7 +53,7 @@ exports.templates = function(next) {
     
     app.res.writeHead(200, { 
       'Content-Type': 'text/javascript', 
-      'Cache-Control': 'max-age=300, public' 
+      'Cache-Control': 'max-age=3000, public' 
     });
     app.res.end(results);
   });

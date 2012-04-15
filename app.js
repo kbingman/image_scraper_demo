@@ -17,8 +17,10 @@ app.http.before.push(ecstatic(__dirname + '/public', {
 }));
 
 app.routes = {
-  '/': { get: base.index },
-  '/scrape': { post: base.results },
+  '/': { 
+    get: base.index,
+    post: base.results 
+  },
   '/js/templates.js': { get: templates }
 };
 

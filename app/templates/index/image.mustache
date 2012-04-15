@@ -1,3 +1,11 @@
 {{# images }}   
-  <li><img src="{{ src }}" alt="thumb"></li>
+  <li class="thumbnail">
+    <div class="display">
+      <img src="{{ src }}" alt="thumb">
+    </div>
+    <p class="filename">{{ filename }}</p>
+  </li>
 {{/ images }} 
+{{^ images }}   
+  <li>No images found</li>
+{{/ images }}
