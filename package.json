@@ -14,6 +14,8 @@
     "sugar": "1.2.4",
     "request":"*",
     "jsdom":"0.2.13",
+    "htmlparser":"1.7.2",
+    "contextify":"*",
     "pkginfo":"*"
   },
   "devDependencies": {
